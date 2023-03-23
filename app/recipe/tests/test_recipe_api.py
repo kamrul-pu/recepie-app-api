@@ -36,7 +36,7 @@ def create_recipe(user, **params):
 
     defaults.update(params)
 
-    recipe = Recipe(user=user, **defaults)
+    recipe = Recipe.objects.create(user=user, **defaults)
     return recipe
 
 
